@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0;
+}
+
+#left-section {
+    flex: 0 0 33%;
+}
+
+.section:not(:last-child) {
+    padding-right: 20px;
+}
+
+#right-section {
+    border-right: none;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.section-title {
+    width: 100%;
+    background-color: #8FCBF4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin: 0;
+    border-radius: 0;
+}
+
+#file-upload {
+    width: 100%;
+}
+
+.file-upload-container {
+    margin-bottom: 20px;
+}
+
+#upload-feedback {
+    color: #28a745;
+    display: none;
+    margin-bottom: 15px;
+}
+
+.dropdown-section {
+    margin-bottom: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dropdown-container select {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#file-upload:hover,
+.dropdowns select:hover {
+    border-color: #888;
+}
+
+.confirm-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.success-message {
+    display: none;
+    margin-left: 10px;
+    color: green;
+}
+
+.content-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.button-group {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.small-btn {
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+.small-btn:hover {
+    background-color: #e1e1e1;
+}
+
+/* ... (其他样式保持不变) ... */
+
+.file-upload-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.file-upload-group {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.file-upload {
+    width: 100%;
+}
+
+#add-file-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-feedback {
+    color: #28a745;
+    display: none;
+    margin-top: 5px;
+}
+
+.visualization-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+}
+
+.visualization-popup img {
+    max-width: 100%;
+    max-height: 80vh;
+}

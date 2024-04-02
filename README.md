@@ -1,2 +1,0 @@
-# ChronoConnect
-ChronoConnect
