@@ -33,7 +33,10 @@ day1_data = generate_edge_data(num_nodes=20, num_edges=100, weight_range=(1, 10)
 # 生成第二天的边数据,在第一天的基础上进行修改
 day2_data = modify_edge_data(day1_data, change_ratio=0.9, weight_range=(1, 30))
 
-print("Day 1 data:")
-print(day1_data)
-print("\nDay 2 data:")
-print(day2_data)
+# 将第一天的数据写入文件
+with open("DataofDay1.txt", "w") as file:
+    file.write(day1_data)
+
+# 将第二天的数据写入文件
+with open("DataofDay2.txt", "w") as file:
+    file.write(day2_data)
