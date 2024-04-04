@@ -103,10 +103,14 @@
             </div>
             <div class="content-container">
                 <div id="visualizationContent">
-                    {% if significant_nodes_image %}
+                    {% if significant_nodes_image == 'generating' %}
+                        <p>Generating significant nodes image...</p>
+                    {% elif significant_nodes_image %}
                         <img src="{% static significant_nodes_image %}" alt="Significant Nodes">
                     {% endif %}
-                    {% if relaxed_paths_image %}
+                    {% if relaxed_paths_image == 'generating' %}
+                        <p>Generating relaxed paths image...</p>
+                    {% elif relaxed_paths_image %}
                         <img src="{% static relaxed_paths_image %}" alt="Relaxed Paths">
                     {% endif %}
                 </div>
