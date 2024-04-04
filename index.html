@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">ChronoConnect</div>
+    <div class="container">
+        <div class="section" id="left-section">
+            <div class="section-header">Algorithm</div>
+            <div class="file-upload-container">
+                <div class="file-upload-group">
+                    <label for="file-upload" class="file-upload-label">Select File</label>
+                    <input type="file" id="file-upload" class="file-upload">
+                    <p class="upload-feedback">File selected</p>
+                </div>
+                <button class="confirm-btn" id="file-upload-confirm">Confirm</button>
+                <p class="success-message"></p>
+            </div>
+            <div class="dropdown-section">
+                <p>Significant Nodes</p>
+                <div class="dropdown-container">
+                    <select name="significant_nodes">
+                        <option value="default">Default</option>
+                        <option value="maximum">Maximum</option>
+                        <option value="minimum">Minimum</option>
+                        <option value="average">Average</option>
+                    </select>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+                <label class="checkbox-label"><input type="checkbox" name="logOutput1">Log Output</label>
+            </div>
+            <div class="dropdown-section">
+                <p>SubGraph Calculation</p>
+                <div class="dropdown-container">
+                    <select name="subgraph_calculation">
+                        <option value="findKCore">Find KCore</option>
+                        <option value="louvainMethod">Louvain Method</option>
+                        <option value="girvanNewman">Girvan-Newman Algorithm</option>
+                        <option value="corenessCentrality">Coreness Centrality</option>
+                    </select>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+                <label class="checkbox-label"><input type="checkbox" name="visualization2">Visualization</label>
+                <label class="checkbox-label"><input type="checkbox" name="logOutput2">Log Output</label>
+            </div>
+            <div class="dropdown-section">
+                <p>Find Cross Time Paths With Significant Nodes</p>
+                <div class="dropdown-container">
+                    <select name="cross_time_paths">
+                        <option value="default">Default</option>
+                        <option value="parallel">Parallel</option>
+                        <option value="divide">Divide</option>
+                        <option value="parallelDivide">Parallel & Divide</option>
+                    </select>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+                <label class="checkbox-label"><input type="checkbox" name="visualization3">Visualization</label>
+                <label class="checkbox-label"><input type="checkbox" name="logOutput3">Log Output</label>
+            </div>
+            <div class="dropdown-section">
+                <p>Find Relaxed Paths With Significant Nodes</p>
+                <div class="dropdown-container">
+                    <select name="relaxed_paths">
+                        <option value="default">Default</option>
+                        <option value="parallel">Parallel</option>
+                        <option value="divide">Divide</option>
+                        <option value="parallelDivide">Parallel & Divide</option>
+                    </select>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+                <label class="checkbox-label"><input type="checkbox" name="visualization4">Visualization</label>
+                <label class="checkbox-label"><input type="checkbox" name="logOutput4">Log Output</label>
+            </div>
+            <div class="dropdown-section">
+                <p>Paths Calculation</p>
+                <div class="dropdown-container">
+                    <select name="paths_calculation">
+                        <option value="extractFrequentEdges">Extract Frequent Edges</option>
+                        <option value="aprioriAlgorithm">Apriori Algorithm</option>
+                        <option value="eclatAlgorithm">Eclat Algorithm</option>
+                        <option value="fpGrowthAlgorithm">FP-Growth Algorithm</option>
+                    </select>
+                    <button class="confirm-btn">Confirm</button>
+                </div>
+                <label class="checkbox-label"><input type="checkbox" name="visualization5">Visualization</label>
+                <label class="checkbox-label"><input type="checkbox" name="logOutput5">Log Output</label>
+            </div>
+        </div>
+        <div class="section" id="middle-section">
+            <div class="section-header">Visualization</div>
+            <div id="visualizationContent"></div>
+            <div class="button-group">
+                <a href="#" class="small-btn download-btn" id="download-visualization-btn">Download</a>
+                <button class="small-btn clean-btn">Clean</button>
+            </div>
+        </div>
+        <div class="section" id="right-section">
+            <div class="section-header">Log Output</div>
+            <div id="logOutputContent"></div>
+            <div class="button-group">
+                <button class="small-btn copy-btn" id="copy-log-btn">Copy</button>
+                <button class="small-btn clean-btn">Clean</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

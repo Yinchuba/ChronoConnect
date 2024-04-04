@@ -1,0 +1,152 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.header {
+    background-color: #4169E1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 64px);
+    overflow-x: hidden;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.section-header {
+    background-color: #8FCBF4;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#left-section, #middle-section {
+    border-right: 1px solid #e0e0e0;
+}
+
+.file-upload-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.file-upload-group {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.file-upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-upload-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.confirm-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-feedback,
+.success-message {
+    color: #28a745;
+    display: none;
+    margin-top: 5px;
+}
+
+.dropdown-section {
+    margin-bottom: 20px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dropdown-container select {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.checkbox-label {
+    display: block;
+    margin-top: 5px;
+}
+
+#logOutputContent,
+#visualizationContent {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#visualizationContent img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#visualizationContent img.show {
+    opacity: 1;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.small-btn {
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+.small-btn:hover {
+    background-color: #e1e1e1;
+}
